@@ -3,7 +3,7 @@ global _start
 section .text
 
 _start:
-	; syscall number 41 (socket)
+    ; syscall number 41 (socket)
     mov al, 41
     mov dil, 2
     mov sil, 1
