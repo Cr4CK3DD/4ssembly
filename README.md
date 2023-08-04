@@ -3,7 +3,7 @@
   nasm -f elf64 BindShell.nasm -o Bindshell.o
   ld BindShell.o -o BindShell
 ```
-- listening port is set to 4444.
+- listening on port 4444.
 
 ## References:
 - https://blog.devgenius.io/getting-started-writing-assembly-language-8ecc116f3627
