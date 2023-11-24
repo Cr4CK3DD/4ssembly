@@ -4,21 +4,21 @@
 ; struct sockaddr_in (10)
 ; int (4)
 ;	---------------------
-;	|		Stack		|
+;	|	Stack 	    |
 ;	+++++++++++++++++++++ +0x0
-;	| 	    port		| 		[ebp - 0x4]
+;	| 	 port 	    | 		[ebp - 0x4]
 ;	+++++++++++++++++++++ +0x4 
-;	| 	   socket1		| 		[ebp - 0x8]
+;	| 	socket1     | 		[ebp - 0x8]
 ;	+++++++++++++++++++++ +0x8 
-;	| 	   socket2		| 		[ebp - 0xC]
+;	| 	socket2	    | 		[ebp - 0xC]
 ;	+++++++++++++++++++++ +0xC
-;	| 	 sockaddr_in	|  		[ebp - 0x1C]
+;	|      sockaddr_in  |  		[ebp - 0x1C]
 ;	+++++++++++++++++++++ +0x1C 
-;	| 	 PROCESS_INFO	| 		[ebp - 0x2C]
+;	|    PROCESS_INFO   | 		[ebp - 0x2C]
 ;	+++++++++++++++++++++ +0x2C
-;	|	 STARTUP_INFO	| 		[ebp - 0x70]
+;	|    STARTUP_INFO   | 		[ebp - 0x70]
 ;	+++++++++++++++++++++ +0x70 
-;	|	    WSDATA		| 		[ebp - 0x200]
+;	|      WSDATA	    | 		[ebp - 0x200]
 ;	+++++++++++++++++++++ +0x200
 
 global _main
